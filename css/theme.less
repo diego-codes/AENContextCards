@@ -1,0 +1,213 @@
+/* ====== VARIABLES ======*/
+    /* === TYPOGRAPHY ===*/
+    @font-family-base: "Roboto", helvetica, arial, sans-serif;
+    @font-size-base: 16px;
+    @font-color-base: #4D4D4D;
+    @font-weight-base: 300;
+    @line-height-base: 1.4em;
+    /* === COLOR VARIABLES === */
+    @dark-green:    #288985;
+    @dark-blue:     #006291;
+    @medium-blue:   #5797A7;
+    @light-green:   #8ABF6F;
+    @light-blue:    #95CECF;
+    @orange:        #FF9932;
+
+    /* === VENDOR PREFIXES === */
+    .border-box {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .transition(@transition) {
+        -moz-transition: @transition;
+        -webkit-transition: @transition;
+        transition: @transition;
+    }
+
+/* ========= BASE ========= */
+body {
+    font-family: @font-family-base;
+    font-size: @font-size-base;
+    font-weight: @font-weight-base;
+    line-height: @line-height-base;
+    
+    background-color: @light-blue;
+    color: @font-color-base;
+}
+
+.header {
+    padding: 1em;
+    background-color: @dark-green;
+    color: #FFF;
+}
+ 
+
+.header--logo {
+    text-decoration: none !important;
+    color: #FFF !important;
+}
+
+
+/* ========= MODULES ========= */
+/* ====== TOPICS ====== */
+.topic {
+    text-decoration: none !important;
+    
+    &:hover, &:active {
+        text-decoration: none !important;
+    }
+}
+
+.topic--container {
+    height: 8em;
+    margin-top: .9em;
+    padding: .5em;
+    position: relative;
+    
+    background-color: #FFF;
+    
+    cursor: pointer;
+    
+    &::before {
+        content: '';
+        display: block;
+        height: 100%;
+        transform: rotate(.5deg);
+        width: 100%;
+        
+        position: absolute;
+        left: .2em;
+        top: .2em;
+        z-index: -999;
+
+        background-color:  #EEE;
+        
+        .transition(100ms ease-out);
+    }
+    
+    &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        transform: rotate(-.2deg);
+        width: 100%;
+        
+        position: absolute;
+        left: .3em;
+        top: .4em;
+        z-index: -1000;
+
+        background-color:  #DDD;
+        
+        .transition(100ms ease-out);
+    }
+    
+    &:hover {
+        &::before, ::after {
+        transform: rotate(0deg);
+        }
+    }
+        
+}
+
+.topic--title {
+    margin: 0;
+    color: @font-color-base;
+}
+
+.topic--counter {
+    padding: .4em .6em;
+    
+    position: absolute;
+    bottom: 0;
+    right: .5em;
+    
+    font-size: .8em;
+    
+    background-color: @light-green;
+    border-radius: .2em .2em 0 0;
+    color: #FFF;
+}
+
+
+/* ====== CARDS ====== */
+.cards--exit {
+    display: block;
+    
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    
+    color: #FFF;
+}
+
+.cards--list {
+    list-style: none;
+}
+
+.cards--item {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    
+    &:first-child{
+        border-top: 1px solid rgba(0, 0, 0, .1);
+    }
+}
+
+.cards--link {
+    display: block;
+    padding: .8em .3em;
+    text-decoration: none !important;
+    color: @dark-blue;
+    
+    &:hover, &:visited, &:active {
+        color: @dark-blue !important;
+        text-decoration: none;
+        background-color: darken(@light-blue, 10%);
+    }
+}
+
+
+/* ====== CARD ====== */
+
+.card--container {
+    position: relative;
+}
+
+.card-navigation {
+    background-color: @medium-blue;
+    color: #FFF;
+    
+    a {
+        padding: .4em;
+        
+        background-color: @medium-blue;
+        color: #FFF;
+        
+        &:hover {
+            background-color: darken(@medium-blue, 15%);
+            text-decoration: none;
+        }
+    }
+}
+.card-navigation--title {
+    padding: .5em;
+    
+    font-size: .8em;
+    text-align: center;
+}
+
+.card--content {
+    padding: .7em;
+    
+    color: @font-color-base;
+    background-color: #FFF;
+}
+
+.card--title {
+    margin: 0;
+    margin-bottom: .7em;
+    
+    font-size: 1.2em;
+    line-height: 1.2em;
+}

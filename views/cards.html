@@ -1,0 +1,24 @@
+<div loading data-ng-if="!car.loaded"></div>
+<div err data-ng-if="car.err"></div>
+
+<a class="cards--exit" href="#/"><span class="glyphicon glyphicon-remove"></span></a>
+
+<div class="row">
+    <div class="col-xs-12">
+        <h1 class="cards--title">{{ car.topic.name }}</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div cards-list-menu class="col-xs-12 visible-xs-block visible-sm-block" data-ng-if="car.selectedCard">
+    </div>
+    <ul class="col-xs-12 cards-list" data-ng-class="{'col-md-4' : car.selectedCard, 'cards-list__active': !car.selectedCard}">
+        <p>{{ car.topic.description }}</p>
+        <li data-ng-repeat="card in car.cards" class="cards-list--item" cards-list></li>
+    </ul>
+
+    <div class="card--container">
+        <div class="col-xs-12 col-md-8 pull-left card" data-ng-repeat="card in car.cards" data-ng-class="card.position" ng-show="card.isSelected" card>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+.card--container {
+	position: relative;
+}
+
+.card--title {
+	margin-bottom: .2em;
+}
+
+.card--author {
+	display: block;
+	margin-bottom: 1em;
+}
+
+.card--socialshare {
+	padding: 0 1em;
+	
+	font-size: .8em;
+	text-align: right;
+
+	background-color: #D5E8E8;
+	color: #A2B2B3;
+}
+
+.card--socialshare__icon {
+	margin-left: .5em;
+	
+	color: #A2B2B3;
+}
+
+.card--socialshare__icon:hover, .card--socialshare__icon:active, .card--socialshare__icon:focus {
+	text-decoration: none;
+
+	color: #97A5A6;
+}
+/*.card__left {
+	left: -100%;
+}
+
+.card.card__right.ng-enter {
+	opacity: 0;
+	left: 10%;
+}
+
+.card.ng-enter {
+	opacity: 0;
+	left: 10%;
+}
+
+.card.card__right.ng-enter-active, .card.ng-leave {
+	opacity: 1;
+	left: 0;
+}
+
+.card__selected.ng-leave-active {
+	opacity: 0;
+	left: -10%;
+}*/

@@ -1,0 +1,17 @@
+
+    <div class="card-navigation">
+        <a data-ng-href="#/{{ car.topic.slug }}/{{ car.setPrevCard($index) }}" data-ng-if="!$first" class="pull-left"><span class="glyphicon glyphicon-menu-left"></span></a>
+        <a data-ng-href="#/{{ car.topic.slug }}/{{ car.setNextCard($index) }}" data-ng-if="!$last" class="pull-right"><span class="glyphicon glyphicon-menu-right"></span></a>
+        <div class="card-navigation--title">Card {{ car.cards.indexOf(card) + 1 }} of {{ car.topic.count }}</div>
+    </div>
+    <div class="card--content">
+        <h2 class="card--title">{{ card.title }}</h2>
+        <small class="card--author">By: <a data-ng-href="{{card.author.URL }}">{{ card.author.name }}</a></small>
+        <p data-ng-bind-html="card.content"></p>
+    </div>
+    <div class="card--socialshare">
+        <p>Share this card: 
+            <a href="" class="card--socialshare__icon" socialshare socialshare-provider="facebook" socialshare-text="{{ card.title }} Find out the answer: " socialshare-url="{{ car.url }}"><span class="zocial-facebook"></a> 
+            <a href="" class="card--socialshare__icon" socialshare socialshare-provider="twitter" socialshare-text="{{ card.title }}" socialshare-url="{{ car.url }}"><span class="zocial-twitter"></a>
+        </p>
+    </div>

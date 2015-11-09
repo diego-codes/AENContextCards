@@ -1,0 +1,50 @@
+.cards-list {
+    max-height: 0px;
+    overflow: hidden;
+
+  	list-style: none;
+
+    background-color: #95cecf;
+
+    -o-transition: max-height 350ms ease-out;
+    -moz-transition: max-height 350ms ease-out;
+    -webkit-transition: max-height 350ms ease-out;
+    transition: max-height 350ms ease-out;
+}
+
+@media (min-width: 992px) {
+  .cards-list {
+    max-height: 25em;
+    overflow-y: scroll;
+  }
+}
+
+.cards-list__active {
+  max-height: 25em;
+  overflow-y: scroll;
+}
+
+.cards-list--item {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cards-list--item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.cards-list--link {
+  display: block;
+  padding: .8em .3em;
+
+  text-decoration: none !important;
+
+  color: #006291;
+}
+.cards-list--link:hover,
+.cards-list--link:visited,
+.cards-list--link:active,
+.cards-list--link__current {
+  text-decoration: none;
+
+  background-color: #72bebf;
+  color: #006291 !important;
+}

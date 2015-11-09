@@ -1,0 +1,21 @@
+<div loading data-ng-if="!top.loaded"></div>
+<div err data-ng-if="top.err"></div>
+
+<div class="row">
+	<h2 class="col-sm-12">Austin EcoNetwork Cards</h2>
+	<p class="col-sm-12">{{ top.app.description }}</p>
+
+	<div class="topic-search col-xs-12 col-md-4 col-md-offset-4">		
+	<input class="topic-search--bar" type="text" data-ng-model="search" placeholder="Seach topics" /> <span class="glyphicon glyphicon-search topic-search--icon" />
+		
+	</div >
+</div>
+
+<div class="row">
+    <a data-ng-repeat="topic in top.topics | filter:search" data-ng-if="topic.count" data-ng-href="#/{{ topic.slug }}" data-ng-click="top.selectedTopic == topic.slug" class="col-xs-12 col-md-4 topic">
+        <div class="topic--container">
+            <h2 class="topic--title">{{ topic.name }}</h2>
+            <div class="topic--counter">{{ topic.count }} cards</div>
+	    </div>
+    </a>
+</div>

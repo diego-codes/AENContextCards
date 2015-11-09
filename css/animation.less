@@ -1,0 +1,68 @@
+.transition(@transition) {
+        -moz-transition: @transition;
+        -webkit-transition: @transition;
+        transition: @transition;
+    }
+
+.content__animate {
+    position: relative;
+    
+    .transition(300ms ease-out);
+    
+    &.ng-enter, &.ng-leave-active {
+        top: 5em;
+        opacity: 0;
+    }
+    
+    &.ng-enter-active, &.ng-leave {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.card__animate__right {
+    position: absolute;
+    left: 0;
+    
+    width: 100%;
+    
+    .transition(150ms ease-out);
+    
+    &.ng-enter-active, &.ng-leave {
+        left: 0;
+        opacity: 1;
+    }
+    
+    &.ng-enter {
+        left: -20%;
+        opacity: 0;
+    }
+    &.ng-leave-active {
+        left: 20%;
+        opacity: 0;
+    }
+    
+}
+
+.card__animate__left {
+    position: absolute;
+    left: 0;
+    
+    width: 100%;
+    
+    .transition(150ms ease-out);
+    
+    &.ng-enter-active, &.ng-leave {
+        left: 0;
+        opacity: 1;
+    }
+    &.ng-enter {
+        left: 20%;
+        opacity: 0;
+    }
+    &.ng-leave-active {
+        left: -20%;
+        opacity: 0;
+    }
+    
+}

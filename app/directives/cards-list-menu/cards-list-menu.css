@@ -1,0 +1,29 @@
+.cards-list--menu {
+	padding: .8em;
+
+	font-size: .845em;
+
+	background-color: #5797a7;
+	color: #fff;
+}
+
+.cards-list--menu--icon {
+	margin-left: .7em;
+
+	-o-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+
+	-o-transition: 350ms ease-out;
+	-moz-transition: 350ms ease-out;
+	-webkit-transition: 350ms ease-out;
+	transition: 350ms ease-out;
+}
+
+.cards-list--menu--icon__active {
+	-o-transform: rotate(-180deg);
+	-moz-transform: rotate(-180deg);
+	-webkit-transform: rotate(-180deg);
+	transform: rotate(-180deg);
+}
