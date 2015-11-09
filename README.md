@@ -15,8 +15,8 @@ Publish.
 
 
 ##Required plugins
-- [WP REST API](http://wp-api.org/)
-- [Custom Post Type UI](http://webdevstudios.com/)
+- [WP REST API](https://wordpress.org/plugins/json-rest-api/)
+- [Custom Post Type UI](https://wordpress.org/plugins/custom-post-type-ui/)
 
 
 ###Custom Post Type UI Import Data
