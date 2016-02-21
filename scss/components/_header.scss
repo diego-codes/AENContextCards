@@ -1,0 +1,15 @@
+.header {
+  background-color: $c-dark-blue;
+  height: 3.125em;
+  margin-bottom: 2em;
+
+  &__logo {
+    display: block;
+    text-indent: -99999em;
+    height: 4.75em;
+    width: 4.75em;
+    background: url(../imgs/AEN_logo.png) no-repeat center;
+    background-size: contain;
+    margin-top: 0.5em;
+  }
+}
