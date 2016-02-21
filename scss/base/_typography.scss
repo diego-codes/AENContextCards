@@ -12,3 +12,11 @@ h5,
 h6, {
   font-family: $f-header;
 }
+
+a {
+  color: $c-teal;
+
+  &:hover, &:active {
+    color: darken($c-teal, 8%);
+  }
+}

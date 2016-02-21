@@ -1,41 +1,78 @@
-// .card--container {
-//     position: relative;
-// }
-//
-// .card-navigation {
-//     background-color: $medium-blue;
-//     color: #FFF;
-//
-//     a {
-//         padding: .4em;
-//
-//         background-color: $medium-blue;
-//         color: #FFF;
-//
-//         &:hover {
-//             background-color: darken($medium-blue, 15%);
-//             text-decoration: none;
-//         }
-//     }
-// }
-// .card-navigation--title {
-//     padding: .5em;
-//
-//     font-size: .8em;
-//     text-align: center;
-// }
-//
-// .card--content {
-//     padding: .7em;
-//
-//     color: $font-color-base;
-//     background-color: #FFF;
-// }
-//
-// .card--title {
-//     margin: 0;
-//     margin-bottom: .7em;
-//
-//     font-size: 1.2em;
-//     line-height: 1.2em;
-// }
+.card {
+  border: 1px solid $c-dark-slate;
+
+  &__navigation {
+    padding: 0.5em;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-transform: uppercase;
+
+    background-color: $c-dark-blue;
+    color: #FFF;
+
+    &__arrow {
+      color: #FFF;
+
+      &:hover, &:active {
+        color: #FFF;
+      }
+    }
+  }
+
+  &__content {
+    padding: 0.5em 1em ;
+  }
+
+  &__title {
+  	margin-bottom: 0.2em;
+  }
+
+  &__author {
+  	display: block;
+  	margin-bottom: 1em;
+    font-size: 0.8em;
+  }
+
+  &__socialshare {
+    padding-right: 0.7em;
+  	font-size: 0.8em;
+  	text-align: right;
+
+  	background-color: lighten(black, 94%);
+
+    &--icon {
+    	margin-left: 0.5em;
+      font-size: 1.3em;
+      vertical-align: middle;
+
+
+      &:hover, &:active {
+      	text-decoration: none;
+      }
+    }
+  }
+}
+/*&__left {
+	left: -100%;
+}
+
+&.card__right.ng-enter {
+	opacity: 0;
+	left: 10%;
+}
+
+&.ng-enter {
+	opacity: 0;
+	left: 10%;
+}
+
+&.card__right.ng-enter-active, .card.ng-leave {
+	opacity: 1;
+	left: 0;
+}
+
+&__selected.ng-leave-active {
+	opacity: 0;
+	left: -10%;
+}*/

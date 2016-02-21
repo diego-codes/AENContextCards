@@ -4,9 +4,9 @@ function cardsListMenu () {
 		templateUrl: 'app/directives/cards-list-menu/cards-list-menu.html',
 		link: function (scope, element, attr) {
 			element.on('click', function () {
-				element.find('span').toggleClass('cards-list--menu--icon__active');
+				element.find('span').toggleClass('cards-list__icon--active');
 
-				angular.element(document.querySelectorAll('.cards-list')).toggleClass('cards-list__active');
+				angular.element(document.querySelectorAll('.cards-list')).toggleClass('cards-list--active');
 			});
 		}
 	}
