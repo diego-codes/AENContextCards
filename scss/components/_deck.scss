@@ -1,0 +1,52 @@
+.topic {
+  &:hover, &:active {
+    text-decoration: none;
+  }
+
+  &__container {
+    height: 8em;
+    margin-top: 0.9em;
+    padding: 0.5em;
+    position: relative;
+    background-color: #FFF;
+    // background-color: #F3F3F3;
+    // border: 1px solid #EEE;
+    border: 1px solid $c-dark-blue;
+    cursor: pointer;
+    // box-shadow: 0.2em 0.2em 0 #DDD;
+    &::after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      border: 1px solid $c-dark-blue;
+      background-color: #F3F3F3;
+      position: absolute;
+      z-index: -10;
+      top: 0.3em;
+      left: 0.3em;
+      transition: transform 200ms ease-in-out;
+    }
+
+    &:hover::after {
+      transform: translate(0.1em,0.1em);
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: $f-color;
+  }
+
+  &__counter {
+    padding: 0.4em 0.6em;
+    position: absolute;
+    bottom: -1px;
+    right: 0.5em;
+    font-size: 0.8em;
+    background-color: $c-teal;
+    border: 1px solid $c-dark-slate;
+    border-radius: 0.2em 0.2em 0 0;
+    color: #FFF;
+  }
+}
